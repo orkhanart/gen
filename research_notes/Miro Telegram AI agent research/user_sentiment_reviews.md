@@ -1,229 +1,323 @@
-# User Sentiment, Reviews and Complaints: "Miro" (most likely Mira, the Telegram AI agent by The Open Platform)
+# User Sentiment, Reviews and Complaints: "Miro", identified as Mira (@mira), the Telegram AI agent by The Open Platform
 
-**Research date:** 2026-11-05.
+**Research date:** 2026-11-05. **Priority, per the coordinator:** user problems, meaning complaints, frustrations, confusion points, unmet needs and churn reasons.
 
 **How the research was done, and its limits (read first):**
 - The Firecrawl search and scrape tools ran out of credits on the first call.
-- WebFetch could not reach any page: producthunt.com and itbrief.co.uk both failed DNS resolution under the session's network policy. As a result, no page was opened in full.
-- Every finding below comes from WebSearch results: link titles, snippets and the search tool's summaries.
+- WebFetch could not reach any page: producthunt.com and itbrief.co.uk both failed DNS resolution under the session's network policy.
+- Every finding below therefore comes from WebSearch results (link titles, snippets and the search tool's summaries). No page was opened in full.
+- Findings marked [MIRA] are about Mira specifically. Everything else is adjacent proxy evidence, labeled **[ADJ-TG-BOTS]** (Telegram AI bot users in general), **[ADJ-MSG-AGENTS]** (AI assistant and agent users in other messengers) or **[ADJ-TG-PRIVACY]** (Telegram users' privacy worries about bots or AI reading their chats).
 
 **Quote reliability labels:**
-- **[VERBATIM-TITLE]**: the exact link title or post text shown by the search engine. This is reliable as a quote, but X post text is cut off at the end.
-- **[SNIPPET]**: text the search result showed as a quotation. It is probably verbatim, but it was not checked against the full page.
+- **[VERBATIM-TITLE]**: the exact link title, post text or URL slug shown by the search engine. Reliable as a quote, but X post text is cut off at the end.
+- **[SNIPPET]**: text the search result showed as a quotation. Probably verbatim, but not checked against the full page.
 - **[PARAPHRASE]**: the search tool's summary or translation. **This is not a quote.** Do not present it as a user's own words.
 
-**Dates:** X post dates were decoded from the status IDs in the URLs (Twitter snowflake IDs encode the posting time). Other dates come from the article date in the URL or the coverage date, where one was available.
+**Dates:** X post dates were decoded from the status IDs in the URLs. Other dates come from the URL, the article date or the coverage window.
 
 ## Key Question 0: Which product is "Miro"? (entity identification and confidence)
 
 ### Takeaway
-No AI agent product called "Miro" that lives in Telegram could be found. The brief almost certainly means **Mira**: a Telegram-native AI agent and personal assistant from **The Open Platform (TOP)**, the team behind Telegram Wallet. Its website is **mira.tg**, its X handle is **@trymira**, and its bot handle is **@mira** (earlier reported as **@MiraAiBot**). **Confidence: about 80%** that Mira is the intended product. The rest is the chance of a very small or stealth "Miro" startup that search does not index.
+No Telegram AI agent called "Miro" exists in any indexed source. The product is **Mira**, from **The Open Platform (TOP, top.co)**, the team behind Telegram Wallet. It runs as the bot and Mini App **@mira** (reported in February 2026 as **@MiraAiBot**), with the website **mira.tg** and the X handle **@trymira**. The coordinator independently confirmed the same identifiers. **Confidence: high, about 90%.**
 
 ### Cited Findings
-- Searches for "Miro AI agent Telegram", "Miro Telegram bot", "miro t.me bot AI agent personal assistant 2026" and "Miro Telegram agent Product Hunt" found no Miro-branded Telegram agent. The results were either Miro the whiteboard company (Sidekicks agents, Support Bot, MCP connectors) or no-code Miro-to-Telegram automation templates (Pipedream, Latenode, Bardeen, Yoom). — [Miro What's New May 2026](https://miro.com/blog/whats-new-may-2026/); [Miro Support Bot (Beta)](https://help.miro.com/hc/en-us/articles/34159808034962-Miro-Support-Bot-Beta); [Pipedream Miro + Telegram](https://pipedream.com/apps/miro-custom-app/integrations/telegram-bot-api); [Bardeen Miro + Telegram](https://www.bardeen.ai/integrations/miro/telegram)
-- Miro's own community has only a hobbyist thread about a Telegram bot that watches a board for changes. It is not a product. — [community.miro.com "telegram bot"](https://community.miro.com/ask-the-community-45/telegram-bot-6194)
-- Mira is described as "a messenger-first AI agent built natively into Telegram". It works in personal and group chats, and users "can add @mira to a group or message it directly without any additional setup" [SNIPPET]. Coverage is from May 2026. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [Dataconomy, 2026-05-20](https://dataconomy.com/2026/05/20/telegrams-ai-agent-ecosystem-mira/)
-- TOP's launch post on X (2026-02-09): "Mira is now live in Telegram — the first personal AI assistant built by a TOP portfolio team. It handles all requests directly in chat, where users can search for information, answer questions, and generate text, images or videos In private mode, requests run via Cocoon's…" [VERBATIM-TITLE] — [@topdotco on X](https://x.com/topdotco/status/2020836050742981033)
-- Russian-language coverage from February 2026 says Mira was launched by the developers of Telegram Wallet and gives the bot address as **@MiraAiBot** [PARAPHRASE]. — [T-Zh (t-j.ru)](https://t-j.ru/news/telegram-mira/); [Anti-Malware.ru, 2026-02-10](https://www.anti-malware.ru/news/2026-02-10-114534/48998); [vc.ru](https://vc.ru/telegram/2729251-chat-bot-mira-v-telegram-wallet-s-ii-vychisleniyami-cocoon)
-- The official site calls itself "AI Agent & Personal AI Assistant for Telegram" [VERBATIM-TITLE]. — [mira.tg](https://mira.tg/)
-- **Name collisions that will pollute any "Mira" search.** None of these is TOP's Telegram agent:
-  - **Mira Network** (@miranetwork): "Building the Trust Layer for AI". — [X](https://x.com/miranetwork/status/2094456809595814074)
-  - **"Mira – AI autopilot for your Telegram channel"**: a separate Product Hunt launch for channel content automation. Its FAQ is at usemira.pro. — [Product Hunt](https://www.producthunt.com/p/mira-10/mira-be4d3afe-dfc1-4e63-b0c5-327d3da7927d); [usemira.pro FAQ](https://usemira.pro/ru/faq)
-  - **"Mira-AI Video/Image Generator"**: an iOS app by NGMOB PTE. LTD. — [App Store](https://apps.apple.com/us/app/-/id6743672316)
-  - **Smartsupp Mira AI** and **Serviceform Mira**: e-commerce and support bots. — [Smartsupp](https://www.smartsupp.com/product-updates/2024-10-introducing-mira-ai/); [Serviceform](https://www.serviceform.com/mira)
-  - The usemira.pro page itself notes that the name "Mira" is shared by several unrelated products [PARAPHRASE]. — [usemira.pro FAQ](https://usemira.pro/ru/faq)
+- Searches for "Miro AI agent Telegram", "Miro Telegram bot", "miro t.me bot AI agent personal assistant 2026" and "Miro Telegram agent Product Hunt" returned only two kinds of result: Miro the whiteboard company, and no-code Miro-to-Telegram automation templates. — [Miro What's New May 2026](https://miro.com/blog/whats-new-may-2026/); [Pipedream](https://pipedream.com/apps/miro-custom-app/integrations/telegram-bot-api); [Bardeen](https://www.bardeen.ai/integrations/miro/telegram); [community.miro.com "telegram bot"](https://community.miro.com/ask-the-community-45/telegram-bot-6194)
+- Mira is "a messenger-first AI agent built natively into Telegram". Users "can add @mira to a group or message it directly without any additional setup" [SNIPPET]. Coverage is from May 2026. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [Dataconomy, 2026-05-20](https://dataconomy.com/2026/05/20/telegrams-ai-agent-ecosystem-mira/)
+- TOP's launch post on X (2026-02-09): "Mira is now live in Telegram — the first personal AI assistant built by a TOP portfolio team. It handles all requests directly in chat, where users can search for information, answer questions, and generate text, images or videos In private mode, requests run via Cocoon's…" [VERBATIM-TITLE] — [@topdotco](https://x.com/topdotco/status/2020836050742981033)
+- February 2026 Russian coverage gives the bot as @MiraAiBot and says it was launched by the developers of Telegram Wallet [PARAPHRASE]. — [T-Zh](https://t-j.ru/news/telegram-mira/); [Anti-Malware.ru, 2026-02-10](https://www.anti-malware.ru/news/2026-02-10-114534/48998); [vc.ru](https://vc.ru/telegram/2729251-chat-bot-mira-v-telegram-wallet-s-ii-vychisleniyami-cocoon)
+- **Products and claims:**
+  - Team Agent ("One AI for Your Whole Telegram Group Chat") claims 150,000+ groups. The H1 2026 report says 175,000 group chats. Launch coverage in May 2026 said 50,000+ groups. — [mira.tg Team Agent](https://mira.tg/products/team-agent); [Mira H1 report](https://mira.tg/report); [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
+  - Mira Pro is listed at 1,500 Telegram Stars a month, renewing every 30 days. It includes 2,000 tokens a month, 50% off extra tokens and higher limits [PARAPHRASE]. — [mira-pro.com FAQ](https://mira-pro.com/). Note: this domain differs from mira.tg, so whether it is official is unconfirmed.
+- **Name collisions that pollute searches:**
+  - Mira Network ("Building the Trust Layer for AI"). — [X](https://x.com/miranetwork/status/2094456809595814074)
+  - "Mira – AI autopilot for your Telegram channel", a separate bot and Mini App at usemira.pro with a separate Product Hunt launch. — [usemira.pro](https://usemira.pro/); [dev.to Show DEV](https://dev.to/niteflex/show-dev-mira-a-telegram-bot-mini-app-that-finds-and-drafts-posts-for-your-channel-b3); [Product Hunt](https://www.producthunt.com/p/mira-10/mira-be4d3afe-dfc1-4e63-b0c5-327d3da7927d)
+  - iOS apps "Mira-AI Video/Image Generator" and "Mira - AI Chat and Companion". — [App Store](https://apps.apple.com/us/app/-/id6743672316); [App Store](https://apps.apple.com/us/app/mira-ai-%EC%B1%84%ED%8C%85-%EC%BB%B4%ED%8C%A8%EB%8B%88%EC%96%B8/id6747144263)
+  - usemira.pro itself notes that the name "Mira" is shared by several unrelated products [PARAPHRASE]. — [usemira.pro FAQ](https://usemira.pro/ru/faq)
 
 ### Inferences
-- "Miro" in the brief is most likely a typo or mishearing of "Mira". The product details match: Telegram-native, agentic, works in group chats, has integrations.
-- The two bot handles (@MiraAiBot in February 2026, @mira by May 2026) suggest TOP later secured the short @mira username, for example through Telegram's collectible username marketplace. **This is unconfirmed.**
-- Heavy name collisions (Miro, Mira Network, other "Mira" bots) are a real problem for discoverability and trust. A user searching "Mira Telegram" can easily land on a different bot. That is relevant to onboarding design: verified-bot cues and a canonical deep link.
+- "Miro" is a typo for "Mira".
+- The handle change from @MiraAiBot to @mira, plus at least two other Telegram bots named "Mira", makes it easy to land on the wrong bot. That is a trust and onboarding risk in its own right.
 
 ### Gaps
-- The Mira website, Product Hunt pages and IT Brief articles could not be opened because WebFetch was blocked. The identification relies on search snippets.
-- I could not confirm whether @MiraAiBot still exists or now redirects to @mira.
-- If the brief really does mean a separate startup literally named "Miro", nothing about it was found.
+- I could not confirm whether @MiraAiBot still works or redirects.
+- I could not confirm whether mira-pro.com is an official TOP property.
 
-## Key Question 1: What do users praise? Which use cases resonate most?
+## Key Question 1: The user problems, grouped into themes and ranked by frequency and severity (synthesis)
 
 ### Takeaway
-The praise visible online is almost all positive X posts. These read as promotional or influencer posts, and some may be paid. They praise three things: summarizing busy group chats; doing things inside Telegram ("no new app, no new tab"); and memory and personality. Mira's own usage data shows plain chat dominates. Only a tiny share of users connect external tools.
+Feedback that is specifically about Mira is thin. About six critical data points were found, mostly Russian-language comments from the launch period, and none on Reddit or Hacker News. Combined with the adjacent evidence, the problems rank roughly as follows. Ranking weighs how often a theme appears across Mira and adjacent sources, then how severe it is for trust and churn.
+
+| # | Problem theme | Mira-specific evidence | Adjacent evidence | Severity |
+|---|---|---|---|---|
+| 1 | **Opaque monetization:** Pro vs tokens vs usage limits; Stars are non-refundable; feels like a bait-and-switch | Yes: a user says Pro "worked two days" then demanded tokens and calls it deception. The FAQ has to explain three separate layers. A reviewer flags credits. | Strong: AI-wrapper refund complaints; Poke pricing; OpenClaw token burn; Telegram AI summaries "Premium/limits" | High (direct churn plus "scam" perception) |
+| 2 | **Privacy and data access:** "Is it reading my chats? Is private mode real?" | Yes: "privacy or just marketing?" headline; other sceptical pieces; group memory spans participants | Strong: Grok-Telegram deal backlash; "huge betrayal" comment on Telegram AI; Poke inbox-access abandonment; Manus FAQ | High (blocks activation of integrations and groups) |
+| 3 | **Low-quality or generic output, and the "spammy TG bot" prior** | Yes: repeated identical answers; "так себе" (so-so) images; "this is advertising"; a positive user admits expecting "TG spammy shii… canned FAQ" | Moderate: AI-wrapper bots that deny which model they use; scam bots | Medium-high (first-session churn) |
+| 4 | **Broken support and recovery paths** | Yes: the support link does not work | Moderate: Stars refunds only through the bot developer via /paysupport | Medium-high (turns a fixable issue into churn) |
+| 5 | **Capability discoverability and setup complexity** | Indirect: users ask "What can you actually do?"; Mira's own blog admits "setup complexity"; only 0.4% connect services; IANA timezone friction | Moderate: Poke onboarding abandonment; OpenClaw setup and security mistakes | Medium (caps value; low activation) |
+| 6 | **Unwanted AI presence and lack of control or opt-out** (especially in groups) | Not found as a complaint. Risk signals: Mira "will introduce herself and join the conversation"; "jumping in when needed"; group moderation powers | Strong: "WhatsApp users fume over new Meta AI button that you can't remove"; Telegram's "compulsory AI" editor petition (500+ upvotes); no summaries opt-out | Medium-high latent risk for the Team Agent |
+| 7 | **Reliability of actions:** time and date errors, slow integrations, security of agents with tool access | Not found for Mira (the GitHub UTC bug is a different "Mira") | Moderate: Poke time zone and date errors; OpenClaw exposed instances and malicious skills; prompt-injection risk | Medium (rises sharply as Mira takes more actions) |
+| 8 | **Platform and ecosystem fragility:** wrong-bot confusion, scam ecosystem, platform bans | Name collisions (Key Question 0) | ChatGPT removed from WhatsApp (50M users affected); Telegram anti-spam freezing Manus agent accounts | Medium |
+| 9 | **Language and region gaps** | Weak: Russian users discussing payment methods (SBP and cards) | Weak: Telegram summaries skip mixed-language pages | Low or unknown |
 
 ### Cited Findings
-- **Group chat summarization and staying inside Telegram.** X post by @defileo (2026-07-03): "I f*ckn hate I didn't find this product earlier. Product that summarized 200 group chat messages while I was away in 10 seconds. It's called @trymira, and it lives directly inside Telegram, no new app, no new tab. I typed one sentence -> it posted across 6 platforms + found…" [VERBATIM-TITLE] — [X](https://x.com/defileo/status/2073053615988830333)
-- **Better than expected, after starting from a sceptical baseline.** X post by @gregwrites_yy (2026-08-11): "I have something to confess y'all. I went to try the Mira app on Telegram expecting the usual Ai chat, TG spammy shii. Another AI bot promising the world, delivering a canned FAQ. So I did what I always do: I just asked it straight up, "What can you actually do?" No fluff. No ma…" [VERBATIM-TITLE; truncated. The framing implies a positive turn, but the rest of the post was not visible.] — [X](https://x.com/gregwrites_yy/status/2087312579701997722)
-- **Memory, personality and real actions.** X post by @Eyuel88 (2026-05-08): "Meet "Mira" The AI Agent that lives inside Telegram! An AI agent with memory, personality, and real actions that creates content, sends emails, and actually gets things done [emoji] > Mira is more than just another chatbot. She's an AI assistant with her own personality, opinions,…" [VERBATIM-TITLE] — [X](https://x.com/Eyuel88/status/2052745780876714461)
-- The mira.tg homepage shows testimonials with a self-reported aggregate rating of **5 from 7 reviews**. The testimonials praise memory and group chat summaries [PARAPHRASE]. The page belongs to the company, so these are curated. — [mira.tg](https://mira.tg/)
-- **Usage mix from Mira's H1 2026 report:** "Almost everyone chats with Mira. Reminders remain the smallest slice of what people do with Mira." [SNIPPET]. The report frames H1 as a shift from assistant to operator, saying "Mira doesn't just answer, it acts" [SNIPPET]. It also says voice is used by Pro subscribers [PARAPHRASE]. It covers search, image generation, automation, group chats, skills and tool actions. — [Mira H1 2026 report](https://mira.tg/report)
-- The same report says only **0.4% of users connect external services** such as Gmail, Calendar or Sheets [PARAPHRASE]. — [Mira H1 2026 report](https://mira.tg/report)
-- **Groups drive discovery.** TOP says more than one-third of new users first encounter Mira in group conversations before using it themselves. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [Dataconomy](https://dataconomy.com/2026/05/20/telegrams-ai-agent-ecosystem-mira/)
-- **Specialised agents.** Coverage says users are turning to specialised agents for financial insights, career planning and nutrition guidance [PARAPHRASE]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
-- **Integrations.** Mira Connect links 800 to 900+ services: Google Calendar, Gmail, Notion, Drive, GitHub, Strava, Canva and others. Sources give different counts. — [TOP: Mira launches Connect with 800+ integrations](https://top.co/insights/mira-connects-800-integrations); [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
-- **Free access.** Early Russian coverage stresses that text use is free, which is a draw [PARAPHRASE]. — [T-Zh](https://t-j.ru/news/telegram-mira/); [Yablyk: "free neural network Mira in Telegram"](https://yablyk.com/079886-besplatnaya-nejroset-mira-v-telegram-kak-zapustit-i-polzovatsya/)
+Evidence for each row is given, with sources, in Key Questions 2 to 4 (Mira) and 8 to 10 (adjacent).
 
 ### Inferences
-- **What resonates most in public posts:** catching up on group chats, the zero-install convenience of living inside Telegram, and the sense of an agent that acts rather than just answers.
-- **The usage data tells a different story.** The integration story is marketed heavily, yet only 0.4% connect services. That is a large gap between the value proposition and actual activation. It is a strong candidate for a design proposal on progressive disclosure of integrations and contextual prompts to connect a tool at the moment of need.
-- **Group chats are both the growth loop and the first impression for a third of new users.** How Mira behaves in groups for people who are not yet users (tone, how often it speaks, consent) is a high-leverage design surface.
+- **Themes 1, 3 and 4 form one chain:** an unclear paywall, then a poor-quality or repeated answer, then a support dead end, then the user calling it a scam and leaving. A design proposal that fixes this chain (transparent balance and entitlements, graceful degradation, an in-chat path to help or a refund) addresses the most direct churn evidence.
+- **Theme 2 is the main barrier to deeper value.** Integrations (0.4% activation) and group memory both require trust that is not yet earned.
+- **Theme 6 has no Mira complaints yet, but it is the biggest predictable risk for the Team Agent.** Every adjacent "AI pushed into my chats" rollout drew backlash.
 
 ### Gaps
-- No independent, non-promotional long-form user review praising specific workflows was found.
-- The X posts look like influencer or campaign content. Their sponsorship status is unknown.
+- No quantitative frequency data exists. The ranking is qualitative, because the Mira-specific sample is about six data points.
+- English-speaking, Persian-, Hindi- and Indonesian-speaking Telegram audiences were not covered by any source found.
 
-## Key Question 2: What do users complain about?
+## Key Question 2: Mira-specific complaints and frustrations (detailed evidence)
 
 ### Takeaway
-Direct complaints are sparse. All of the ones found are in Russian, from the launch period, and are paraphrased here.
-
-| Complaint theme | What users said |
-|---|---|
-| Paywall and credits feel deceptive | A Pro subscription that "worked for two days" and then asked for tokens again |
-| Repetitive answers | The bot repeats the same answers or links |
-| Broken support | The support link does not work |
-| Image quality | Mediocre image generation |
-| Value | Scepticism about whether the product adds anything |
-
-A third-party, competitor-run review adds that action flows feel heavier than a simple Q&A bot, and flags credit-based pricing.
+Every critical comment about Mira found online is paraphrased below. None could be quoted verbatim, because the comment pages could not be opened.
 
 ### Cited Findings
-- **Subscription and token confusion, perceived as deception.** In the T-Zh comments, a user says they bought Mira Pro, it worked for only two days, and then tokens were required again. They call it a deception (обман) and do not recommend the subscription [PARAPHRASE/translation; exact comment date not visible]. — [T-Zh comments](https://t-j.ru/news/telegram-mira/)
-- **Repetitive replies, dead support link, weak images.** Another commenter complains that the bot sends the same answers or links to support, that the support link does not work, and that photo generation quality is low. They call it "так себе" ("so-so") for photo generation [PARAPHRASE; "так себе" probably verbatim]. — [T-Zh comments](https://t-j.ru/news/telegram-mira/)
-- **"Advertising" and wasted compute.** A viewer commenting on a Russian YouTube walkthrough called the project advertising that wastes electricity and computing power [PARAPHRASE]. — [YouTube: "ИИ-ассистент Mira: лучший персональный помощник в Telegram? Полный разбор функций"](https://www.youtube.com/watch?v=hZTyk1PHtvY)
-- **Pricing model behind the complaints.** Text use is free, but requests involving photos and video need tokens, which are bought with Telegram Stars [PARAPHRASE]. — [T-Zh](https://t-j.ru/news/telegram-mira/)
-- **Pro price, low confidence.** One third-party page says Mira Pro costs 1,500 Telegram Stars a month and includes 2,000 tokens a month [PARAPHRASE]. The search could not find an official pricing page. — [proxy.best listing "Mira Pro — AI assistant in Telegram with premium models"](https://proxy.best/)
-- **Heavier flows than a Q&A bot.** A comparison article says action-oriented flows can feel heavier than a simple Q&A bot and that pricing uses in-app credits for premium models [PARAPHRASE]. The publisher sells a competing Telegram bot, so it may be biased. — [Qualtir: Best AI Bots for Telegram 2026](https://qualtir.com/blog/best-ai-bots-for-telegram-2026)
-- **Integration reliability is discussed but not detailed.** An aggregator says users discuss how well Mira connects to Gmail, Calendar and other services, but it reports no specific failures. It may be describing a different "Mira" [PARAPHRASE]. — [apimaster.ai Mira review](https://apimaster.ai/ai-agents/mira)
-- **Privacy scepticism** is covered in Key Question 4. — [VGTimes](https://vgtimes.ru/news/147319-v-telegram-zapuschen-ii-assistent-mira-privatnost-ili-prosto-marketing.html)
+- **[MIRA] Paywall felt like deception (theme 1).** In the T-Zh comments, a user says they paid for Mira Pro, it worked for only two days, then the bot demanded tokens again. They call it deception (обман) and advise against the subscription [PARAPHRASE/translation; probably February–March 2026; exact date not visible]. — [T-Zh comments](https://t-j.ru/news/telegram-mira/)
+- **[MIRA] Repeated answers, dead support, weak images (themes 3 and 4).** A T-Zh commenter says the bot sends the same answers or links to support, the support link does not work, and photo generation is "так себе" ("so-so") [PARAPHRASE; "так себе" probably verbatim]. — [T-Zh comments](https://t-j.ru/news/telegram-mira/)
+- **[MIRA] "It's just advertising" (theme 3).** A YouTube viewer called the project advertising that wastes electricity and computing power [PARAPHRASE]. — [YouTube: "ИИ-ассистент Mira: лучший персональный помощник в Telegram? Полный разбор функций"](https://www.youtube.com/watch?v=hZTyk1PHtvY)
+- **[MIRA] Low expectations going in (theme 3).** X post, @gregwrites_yy (2026-08-11): "I went to try the Mira app on Telegram expecting the usual Ai chat, TG spammy shii. Another AI bot promising the world, delivering a canned FAQ. So I did what I always do: I just asked it straight up, "What can you actually do?"…" [VERBATIM-TITLE]. The rest of the post is positive in tone. — [X](https://x.com/gregwrites_yy/status/2087312579701997722)
+- **[MIRA] Reminder setup friction (theme 5).** In the same thread, when asked to set a 9:00 pill reminder, Mira asked for the user's timezone and only confirmed after a correction to a proper IANA timezone [PARAPHRASE]. — [X, @gregwrites_yy, 2026-08-11](https://x.com/gregwrites_yy/status/2087312579701997722)
+- **[MIRA] Heavier than a Q&A bot (themes 1 and 5).** Action-oriented flows "can feel heavier than a simple Q&A bot", and premium models cost in-app credits [PARAPHRASE]. The publisher sells a competing bot. — [Qualtir: Best AI Bots for Telegram 2026](https://qualtir.com/blog/best-ai-bots-for-telegram-2026)
+- **[MIRA] Privacy scepticism (theme 2):** see Key Question 5. — [VGTimes](https://vgtimes.ru/news/147319-v-telegram-zapuschen-ii-assistent-mira-privatnost-ili-prosto-marketing.html)
+- **Searched for but not found:** no posts reporting Mira hallucinating, setting wrong reminders, spamming groups, being slow, or failing on integrations. Queries for these on X, Reddit and Russian sites returned nothing. — Searches on 2026-11-05
 
 ### Inferences
-- **The most design-relevant complaint is that the subscription and token model is opaque.** Users did not understand why a paid Pro plan still needed tokens. This points to unclear entitlement communication: what Pro includes, which actions cost tokens, and balance and expiry visibility.
-- **Repeated answers and dead support links suggest weak recovery paths.** When the agent fails, users have no way to escalate.
-- **Missing from the evidence:** no complaints were found about hallucinations, speed, notification spam or language support. Treat that as missing evidence, not as evidence that these problems do not exist.
+- The complaints come mainly from the February–March 2026 launch audience: Russian-speaking, free-AI seekers. Grievances from the later English-speaking and group audience are not visible.
 
 ### Gaps
-- Exact wording and dates of the T-Zh and YouTube comments are unknown; the pages could not be opened.
-- No English-language complaint threads (Reddit, Hacker News, Telegram groups) were found.
-- No data was found on hallucinations, latency, onboarding drop-off, group notification noise or non-English quality.
+- Verbatim comment text and dates for T-Zh and YouTube are unknown.
+- Replies to @trymira on X and comments in Mira's Telegram channel were unreachable. These are the most likely places for current complaints.
 
-## Key Question 3: What feature requests recur?
+## Key Question 3: Confusion points, unmet needs, feature requests and churn reasons (Mira)
 
 ### Takeaway
-No recurring user feature requests could be found in public sources. The only forward-looking items are the company's own roadmap: agent-to-agent interactions and a bounded payment sub-wallet. Design needs can be inferred from the complaints above.
+The clearest confusion is the **three-layer pricing model**: Pro subscription, tokens for media, and separate usage limits, all paid in non-refundable Stars. Next comes **what Mira can actually do**, plus setup complexity. The only explicit churn reason found is the Pro and token complaint. No user-voiced feature requests were found; the needs below are inferred.
 
 ### Cited Findings
-- The roadmap includes agent-to-agent interactions and a dedicated payment sub-wallet for bounded purchases [PARAPHRASE]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [Dataconomy](https://dataconomy.com/2026/05/20/telegrams-ai-agent-ecosystem-mira/)
-- Mira Connect builds on the agent's memory architecture, which tracks user preferences and context across conversations [PARAPHRASE]. — [TOP: Mira Connect](https://top.co/insights/mira-connects-800-integrations)
+- **[MIRA] The FAQ has to separate three concepts:** "Tokens are a separate currency only for paid generation: images, video, music and stickers. Usage limits are a separate matter that apply to all activity." [SNIPPET] It also says chat, voice, search and analysis don't spend tokens [PARAPHRASE]. — [mira-pro.com FAQ](https://mira-pro.com/)
+- **[MIRA] Starter economics:**
+  - New users start with 150 tokens, enough for one video or five images [PARAPHRASE].
+  - 300 Stars buy 300 tokens [PARAPHRASE].
+  - Free tokens are offered for subscribing to a channel, checked under "Мои токены" ("My tokens") [PARAPHRASE].
+  - Sources disagree on the video model (Google Veo 3 vs Alibaba WAN 2.2).
+  — [Yablyk](https://yablyk.com/079886-besplatnaya-nejroset-mira-v-telegram-kak-zapustit-i-polzovatsya/); [T-Zh](https://t-j.ru/news/telegram-mira/)
+- **[MIRA] Where to subscribe:** Pro unlocks the most powerful models, higher image and video limits, advanced automation and priority performance, and is bought inside the Mini App [PARAPHRASE]. — [Mira blog](https://mira.tg/blog/mira-1-million-monthly-users)
+- **[ADJ-TG-BOTS] Stars refunds:**
+  - Telegram's Stars terms say "All sales of Telegram Stars are final" [SNIPPET]. — [Telegram Stars ToS](https://telegram.org/tos/stars)
+  - Refunds have to come from the bot developer, requested via /paysupport, with escalation to Telegram using the transaction ID [PARAPHRASE]. — [Telegram Stars ToS](https://telegram.org/tos/stars); [PayStars guide](https://paystars.uz/en/news/telegram-stars-refund-paysupport-guide/)
+  - This is the platform rule behind the Pro complaint.
+- **[MIRA] Setup complexity admitted by the company.** Mira's own comparison post concedes "the honest trade-off is setup complexity" [SNIPPET]. It lists GPT-4o as the default model, with 10+ selectable models [PARAPHRASE]. — [Mira blog: Best AI Assistant for Telegram in 2026: Honest Comparison](https://mira.tg/blog/best-ai-assistant-for-telegram)
+- **[MIRA] Activation funnel, from Mira's own H1 report:** almost everyone chats; reminders are the smallest use ("Reminders remain the smallest slice of what people do with Mira" [SNIPPET]); about 40% of users "put Mira to work on a real task" [PARAPHRASE]; **0.4% connect external services** [PARAPHRASE]. — [Mira H1 2026 report](https://mira.tg/report)
+- **[MIRA] Company roadmap, not user requests:** agent-to-agent interactions and a payment sub-wallet for bounded purchases [PARAPHRASE]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [Efficiently Connected](https://www.efficientlyconnected.com/mira-telegram-messenger-native-ai-agent/)
+- **[MIRA] Growth cooling.** An analyst notes "that growth rate will inevitably moderate" [SNIPPET]. — [Efficiently Connected](https://www.efficientlyconnected.com/mira-telegram-messenger-native-ai-agent/)
 
 ### Inferences
-These are needs implied by the complaints, not stated requests:
-- Clear Pro and token entitlements, and a visible balance.
-- A support channel that works.
-- Fewer repeated or canned replies.
-- Better image quality.
-- A plain-language "what can you actually do?" capability tour. The @gregwrites_yy post shows users probing for exactly this.
+These are needs implied by the complaints and confusion, not user requests:
+1. A single, glanceable "what you have" view: plan, token balance, limits left, reset date.
+2. An explanation before any action that costs tokens.
+3. An in-chat refund and help path that works.
+4. A capability tour that answers "what can you actually do?".
+5. Natural-language timezone capture: infer it from the city or Telegram locale, not an IANA string.
+6. Integration prompts triggered by context, at the moment a connected tool would help.
+
+**Likely churn reasons:**
+- A paywall surprise after paying.
+- Repetitive or low-quality output in the first session.
+- Nowhere to go when things fail.
 
 ### Gaps
-- The best places to find feature requests are Mira's Telegram community channel or group comments (via t.me/s/ previews) and replies to @trymira on X. Neither was searchable or fetchable in this session.
+- No cancellation or retention data was found.
+- No explicit feature-request threads were found.
+- The Mira wiki and help pages beyond the group-chat overview were not retrievable.
 
-## Key Question 4: Are there trust and privacy concerns about giving the agent access to Telegram chats? How does the company respond?
+## Key Question 4: What do users praise? Which use cases resonate most? (Mira)
 
 ### Takeaway
-Yes. Russian-language tech media openly asked whether Mira's "private mode" is real privacy or marketing. The company's answer is architectural: a Private Mode that runs inference on Telegram's Cocoon network (TEE, Intel TDX, with encrypted prompts). No independent audit, no data retention policy and no direct company reply to critics were found. Mira's persistent memory across personal and group chats sharpens the concern.
+Public praise comes from X posts that read as promotional. Some YouTube coverage is explicitly sponsored, with an #ad tag and a referral link. The use cases praised are summarizing group chats, zero-install convenience inside Telegram, memory and personality, and an agent that takes actions.
 
 ### Cited Findings
-- VGTimes headline: "В Telegram запущен ИИ-ассистент Mira: приватность или просто маркетинг?" ("Telegram launches AI assistant Mira: privacy or just marketing?") [VERBATIM-TITLE]. It questions whether the "digital amnesia" privacy mode is only marketing [PARAPHRASE]. — [VGTimes](https://vgtimes.ru/news/147319-v-telegram-zapuschen-ii-assistent-mira-privatnost-ili-prosto-marketing.html)
-- An Estonian and Russian piece by abit.ee notes the promises of privacy and free use and urges readers to look past the claims [PARAPHRASE]. — [abit.ee (RU)](https://abit.ee/ru/sowtware/messendzery/telegram-mira-cocoon-chatgpt-nano-banana-google-veo-3-ai-assistant-blockchain-telegram-stars-privacy-ru)
-- MEXC News says it remains to be seen whether Cocoon's privacy claims hold up to scrutiny [PARAPHRASE]. — [MEXC News](https://www.mexc.com/news/995982)
-- **The company's position.** TOP's launch post says that "In private mode, requests run via Cocoon's" decentralized GPU network built on TON with encrypted execution [VERBATIM-TITLE fragment plus PARAPHRASE]. Private Mode is pitched to enterprise teams and privacy-focused users. — [@topdotco on X, 2026-02-09](https://x.com/topdotco/status/2020836050742981033); [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
-- Cocoon uses TEEs (Intel TDX) for confidential inference and keeps prompts encrypted. — [CyberInsider](https://cyberinsider.com/telegram-introduces-privacy-focused-ai-summaries-backed-by-cocoon/); [Let's Data Science](https://letsdatascience.com/news/telegram-launches-cocoon-for-private-ai-d465238c)
-- Russian coverage also headlines the Cocoon private mode at launch. — [Computerra](https://www.computerra.ru/335790/v-telegram-predstavlen-ii-assistent-mira-s-privatnym-rezhimom-na-baze-cocoon/); [Anti-Malware.ru](https://www.anti-malware.ru/news/2026-02-10-114534/48998)
-- **Memory scope.** Mira retains memory across personal and group interactions, which creates "persistent shared context across participants" [SNIPPET, company claim]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [TOP: Mira Connect](https://top.co/insights/mira-connects-800-integrations)
-- The general sceptical baseline toward Telegram bots ("TG spammy shii … canned FAQ") appears even in a positive Mira post. — [@gregwrites_yy on X, 2026-08-11](https://x.com/gregwrites_yy/status/2087312579701997722)
+- **[MIRA]** @defileo (2026-07-03): "Product that summarized 200 group chat messages while I was away in 10 seconds. It's called @trymira, and it lives directly inside Telegram, no new app, no new tab. I typed one sentence -> it posted across 6 platforms + found…" [VERBATIM-TITLE] — [X](https://x.com/defileo/status/2073053615988830333)
+- **[MIRA]** @Eyuel88 (2026-05-08): "An AI agent with memory, personality, and real actions that creates content, sends emails, and actually gets things done [emoji] > Mira is more than just another chatbot." [VERBATIM-TITLE] — [X](https://x.com/Eyuel88/status/2052745780876714461)
+- **[MIRA]** Greg's post (2026-08-11) describes a good experience: Mira asked what he cared about before building a daily briefing [PARAPHRASE]. — [X](https://x.com/gregwrites_yy/status/2087312579701997722)
+- **[MIRA] Thin and sponsored reviews:**
+  - The English YouTube video "This AI Assistant Lives Inside Telegram (Mira AI)" is tagged #ad and has a referral link [PARAPHRASE]. — [YouTube](https://www.youtube.com/watch?v=n361vOBtRrc)
+  - The Russian video "Тестирую ИИ Агента Mira - Telegram бот вместо 10 нейросетей" ("Testing the Mira AI agent: a Telegram bot instead of 10 neural networks") also uses a referral link [PARAPHRASE]. — [YouTube](https://www.youtube.com/watch?v=F1GZJKsuIDE)
+  - The homepage shows a self-reported 5.0 rating from 7 reviews, and the chats page 5.0 from 6. — [mira.tg](https://mira.tg/); [mira.tg/chats](https://mira.tg/chats)
+- **[MIRA] Groups as the growth loop:**
+  - More than a third of new users first meet Mira in a group. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
+  - Specialised agents for finance, career planning and nutrition are in demand [PARAPHRASE]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
+- **[MIRA] Free text use** is the hook for Russian-speaking early adopters [PARAPHRASE]. — [Yablyk](https://yablyk.com/079886-besplatnaya-nejroset-mira-v-telegram-kak-zapustit-i-polzovatsya/)
 
 ### Inferences
-- Private Mode looks like an opt-in mode, not the default. That would mean ordinary requests and group memory are handled under standard processing. This is **unconfirmed**, but the design implication holds either way: users need to see clearly which mode is on, what Mira remembers, and who in a group can see it.
-- Group memory means participants who never opted in may have their messages remembered. That consent and visibility issue is a ripe area for a design proposal: memory indicators, a "forget this" control, and per-group memory settings.
-- The company's answer is technical (TEE and Cocoon), not experiential. Users cannot verify TEE claims, so trust has to come from in-product transparency.
+- The resonant value is time saved catching up on groups, plus never leaving Telegram. Design proposals should protect these strengths while fixing the trust and pricing issues.
 
 ### Gaps
-- Mira's privacy policy, data retention terms, and whether group messages are stored or used for training could not be checked; mira.tg could not be fetched.
+- No unsponsored long-form English review was found.
+
+## Key Question 5: Trust and privacy concerns, and how the company responds (Mira)
+
+### Takeaway
+Russian-language tech media openly questioned whether Mira's "private mode" is real privacy or marketing. TOP responds with architecture, not product transparency: a Private Mode on Telegram's Cocoon TEE network (Intel TDX, encrypted prompts). No audit, no retention policy and no direct reply to critics were found. Mira's memory spans personal and group chats, so group members who never opted in are affected.
+
+### Cited Findings
+- **[MIRA]** VGTimes headline: "В Telegram запущен ИИ-ассистент Mira: приватность или просто маркетинг?" ("Telegram launches AI assistant Mira: privacy or just marketing?") [VERBATIM-TITLE]. It questions the "digital amnesia" mode [PARAPHRASE]. — [VGTimes](https://vgtimes.ru/news/147319-v-telegram-zapuschen-ii-assistent-mira-privatnost-ili-prosto-marketing.html)
+- **[MIRA]** abit.ee urges readers to look past the promises of privacy and free use [PARAPHRASE]. — [abit.ee](https://abit.ee/ru/sowtware/messendzery/telegram-mira-cocoon-chatgpt-nano-banana-google-veo-3-ai-assistant-blockchain-telegram-stars-privacy-ru)
+- **[MIRA]** MEXC says it remains to be seen whether Cocoon's privacy claims hold up to scrutiny [PARAPHRASE]. — [MEXC](https://www.mexc.com/news/995982)
+- **[MIRA] Company response.** Private mode runs requests "via Cocoon's" decentralized GPU network on TON with encrypted execution [VERBATIM-TITLE fragment]. Private Mode is pitched to enterprise and privacy-focused users. — [@topdotco, 2026-02-09](https://x.com/topdotco/status/2020836050742981033); [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
+  - Cocoon uses Intel TDX TEEs and encrypted prompts. — [CyberInsider](https://cyberinsider.com/telegram-introduces-privacy-focused-ai-summaries-backed-by-cocoon/)
+- **[MIRA] Memory spans personal and group chats.** It enables "persistent shared context across participants" [SNIPPET, company claim]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats); [TOP: Mira Connect](https://top.co/insights/mira-connects-800-integrations)
+- **[MIRA] Group powers.** The wiki says that in groups Mira can "auto-delete spam, warn about rule violations, keep the chat clean", and that when started "Mira will introduce herself and join the conversation". Users get its attention with @mira or a reply [SNIPPET]. — [Mira wiki: Group Chats](https://wiki.mira.tg/group-chats/overview)
+- **[MIRA] Expanding blast radius.** Mira Connect lets it act on email, calendars and code tools [PARAPHRASE]. — [TOP: Mira Connect](https://top.co/insights/mira-connects-800-integrations)
+
+### Inferences
+- Users cannot see TEE claims working. Trust has to come from visible product signals: which mode is on, what is remembered, who in the group can see it, and how to forget or remove it.
+- Moderation powers (deleting messages) plus group memory make the Team Agent a likely flashpoint for consent complaints. This is the proxy pattern in Key Question 10.
+
+### Gaps
+- Mira's privacy policy, data retention terms, whether data is used for training, and what a bot with admin rights stores were not retrievable.
 - No independent audit of Cocoon's TEE attestation was found.
-- No official company response to the "privacy or marketing?" criticism was found.
 
-## Key Question 5: Ratings, app stores, Product Hunt and Telegram audience metrics
-
-### Takeaway
-Mira appears to be bot-only. No App Store or Google Play app for TOP's Mira was found. No Product Hunt launch for TOP's Mira was found (the "Mira" on Product Hunt is a different channel-autopilot product). Audience size is reported only by the company and promoters, and the figures conflict, ranging from 130K users at launch to "2M+ users".
-
-### Cited Findings
-- **Users at launch.** Early Russian coverage said the bot had passed 130,000 users [PARAPHRASE]. — [T-Zh](https://t-j.ru/news/telegram-mira/)
-- **Monthly users.** Mira's blog says the counter on its official Telegram profile read **1,167,762 users per month**. The blog post is titled "Mira Just Crossed 1 Million Monthly Users Inside Telegram" [VERBATIM-TITLE plus PARAPHRASE]. — [Mira blog](https://mira.tg/blog/mira-1-million-monthly-users)
-- **Total users.** TOP cites more than 2 million users [PARAPHRASE]. — [TOP insights](https://top.co/insights/mira-ai-assistant-telegram)
-- **MAU claim on X.** A promotional X post in the results claimed over 550,000 monthly active users. The search tool did not clearly say which post. It may be [@ChristianDior31, 2026-08-14](https://x.com/ChristianDior31/status/2088241171067789642). Treat it as unverified.
-- **OpenRouter.** OpenRouter lists Mira as "the leading AI agent inside Telegram". Mira claims rank #5 among AI productivity agents on OpenRouter and 460 billion tokens processed in H1 2026. Another post cites 440B, so the figures differ. — [OpenRouter: Mira](https://openrouter.ai/apps/mira); [Mira blog](https://mira.tg/blog/mira-ranks-5-among-global-ai-productivity-apps-on-openrouter); [Mira H1 report](https://mira.tg/report); [CodeSOTA OpenRouter snapshot, 2026-08-24](https://www.codesota.com/agentic/openrouter-apps/mira)
-- **Third-party ranking.** A comparison site calls Mira one of the most-installed consumer agents on Telegram [PARAPHRASE]. — [Qualtir](https://qualtir.com/blog/best-ai-bots-for-telegram-2026)
-- **Homepage rating.** The homepage shows a self-reported 5.0 rating from 7 reviews [PARAPHRASE]. — [mira.tg](https://mira.tg/)
-- **The Product Hunt "Mira" is a different product** ("AI autopilot for your Telegram channel"). A tracker shows 0 upvotes, 1 comment, and #28 on its launch day [PARAPHRASE]. — [hunted.space](https://www.hunted.space/product/mira-10); [Product Hunt](https://www.producthunt.com/p/mira-10/mira-be4d3afe-dfc1-4e63-b0c5-327d3da7927d)
-
-### Inferences
-- The user numbers measure different things (total users, monthly users, MAU, and different dates) and all come from the company or its promoters. The safest framing is "company-reported roughly 1M+ monthly users by mid or late 2026".
-- With no app store presence, there is no large public body of reviews. Telegram itself offers no review or rating mechanism for bots, so dissatisfaction tends to surface only in scattered comments.
-
-### Gaps
-- TGStat and Telemetr data for @mira or @MiraAiBot could not be retrieved, because the tools were blocked.
-- Telegram's public t.me/mira page, which shows a monthly-users count, could not be fetched to verify the current number.
-
-## Key Question 6: Community signals (Reddit, Hacker News, X, YouTube, Telegram)
+## Key Question 6: Ratings, app stores, Product Hunt and Telegram audience metrics (Mira)
 
 ### Takeaway
-Community discussion of Mira is thin.
-
-| Platform | What was found |
-|---|---|
-| Reddit | Nothing |
-| Hacker News | Nothing |
-| X | Promotional or influencer posts |
-| Russian media and YouTube | Scattered sceptical comments |
-| Telegram groups and channels | Could not be checked |
+Mira exists only as a bot and Mini App. No App Store or Play listing, and no Product Hunt launch, was found for TOP's Mira. Ratings are thin: 5.0 from 6 or 7 reviews on Mira's own site, and "No reviews yet" on the TG.app directory. All audience figures are company-reported and growing.
 
 ### Cited Findings
-- A targeted search ("Mira Telegram bot reddit") found **no Reddit threads** about TOP's Mira. — Search on 2026-11-05. Results: [hunted.space](https://www.hunted.space/product/mira-10) and [T-Zh](https://t-j.ru/news/telegram-mira/), but no reddit.com threads.
-- On X, the visible posts are positive and promotional in tone: [@defileo, 2026-07-03](https://x.com/defileo/status/2073053615988830333); [@Eyuel88, 2026-05-08](https://x.com/Eyuel88/status/2052745780876714461); [@gregwrites_yy, 2026-08-11](https://x.com/gregwrites_yy/status/2087312579701997722). The company account is [@trymira](https://x.com/trymira).
-- A Russian YouTube walkthrough exists, and its comments include a sceptical "this is advertising" reaction [PARAPHRASE]. — [YouTube](https://www.youtube.com/watch?v=hZTyk1PHtvY)
-- Third-party explainer and SEO guides exist, but they are not user voice. — [Netolink guide](https://netolink.com/mira/); [Efficiently Connected: "Mira on Telegram: The Messenger-Native AI Agent Bet"](https://www.efficientlyconnected.com/tag/telegram/)
+- **[MIRA] Audience over time:**
+  - About 130K users shortly after the February 2026 launch [PARAPHRASE]. — [T-Zh](https://t-j.ru/news/telegram-mira/)
+  - 500K+ monthly active users, "doubling month on month", and 50K+ groups in May 2026 [PARAPHRASE]. — [IT Brief UK](https://itbrief.co.uk/story/mira-ai-agent-launches-inside-telegram-group-chats)
+  - 2M+ users. — [TOP](https://top.co/insights/mira-ai-assistant-telegram)
+  - A counter of 1,167,762 monthly users, in the post "Mira Just Crossed 1 Million Monthly Users Inside Telegram". — [Mira blog](https://mira.tg/blog/mira-1-million-monthly-users)
+  - 175K group chats in H1 2026. — [Mira report](https://mira.tg/report)
+- **[MIRA] OpenRouter:** "the leading AI agent inside Telegram". Mira says it ranks #5 in AI productivity and processed 460B tokens in H1 2026 (another post says 440B). — [OpenRouter](https://openrouter.ai/apps/mira); [Mira blog](https://mira.tg/blog/mira-ranks-5-among-global-ai-productivity-apps-on-openrouter); [CodeSOTA, 2026-08-24](https://www.codesota.com/agentic/openrouter-apps/mira)
+- **[MIRA] Directory and site ratings:**
+  - The TG.app directory listing shows "No reviews yet" [SNIPPET]. — [tg.app/apps/mira](https://tg.app/apps/mira/)
+  - Site ratings are 5.0 from 7 (homepage) and 5.0 from 6 (chats page). — [mira.tg](https://mira.tg/); [mira.tg/chats](https://mira.tg/chats)
+- **Not Mira:** the Product Hunt "Mira" (channel autopilot) had 0 upvotes, 1 comment and placed #28. — [hunted.space](https://www.hunted.space/product/mira-10)
 
 ### Inferences
-- The low-key Reddit and Hacker News footprint fits Mira's audience. It looks consumer-heavy, Telegram-native and partly crypto/TON-adjacent and Russian-speaking, so feedback likely lives inside Telegram itself rather than on Western forums. User interviews or in-bot feedback would be needed to ground a proposal properly.
+- Telegram bots have no public review mechanism. Dissatisfaction is therefore mostly invisible, appearing in scattered comments or silent churn. Instrumenting in-chat feedback is itself a design opportunity.
 
 ### Gaps
-- Telegram channel and group comments (t.me/s/ previews), the full set of YouTube comments, and the replies and quote-posts on @trymira could not be retrieved. These are the highest-value next sources.
+- TGStat and Telemetr pages were unreachable, so there is no independent audience verification.
 
-## Key Question 7: PROXY, not Mira-specific: common complaints about Telegram AI assistant bots in general
+## Key Question 7: Community signals (Reddit, Hacker News, X, YouTube, Telegram)
 
 ### Takeaway
-**Proxy evidence, clearly labeled.** General concerns about Telegram AI bots cluster around:
-- Uncertainty over what a bot in a group can read. Telegram's privacy mode and admin status determine this.
-- Pervasive scam, phishing and impersonation bots, which lower trust in any new bot.
-- Limits and paywalls on free bots.
-
-Most sources here are vendor blogs, so they are useful for themes but not for measuring how common each problem is.
+- **Reddit and Hacker News:** no threads about Mira.
+- **X:** promotional or influencer posts.
+- **YouTube:** mostly sponsored videos, plus one sceptical comment.
+- **Russian media comments:** the only organic critique.
+- **Telegram's own channels and groups:** unreachable.
 
 ### Cited Findings
-- **What a group bot can see.** Telegram Privacy Mode is on by default: a group bot receives commands aimed at it and replies to its messages, while bots added as admins receive all messages [PARAPHRASE]. — [Qualtir: Telegram AI chatbot for groups](https://qualtir.com/blog/telegram-ai-chatbot-for-groups)
-- **Developer docs for open-source ChatGPT bots.** One project's docs say: "You should disable the privacy mode of the bot. Otherwise the bot will not receive the messages from the group chat." [SNIPPET; the search tool did not pin down which page] — [pokitoki on Docker Hub](https://hub.docker.com/r/pengshp/pokitoki); [buhe/chatgpt-telegram-bot on GitHub](https://github.com/buhe/chatgpt-telegram-bot)
-- **Scam bots.** Malicious Telegram bots run fake surveys, quizzes and competitions that ask for personal details [PARAPHRASE]. — [NordVPN: Telegram scams 2026](https://nordvpn.com/blog/telegram-scams/)
-- **Unwanted contact.** Bots can start conversations with users who have not blocked them, and attackers exploit default privacy settings [PARAPHRASE]. — [AwaitHuman: Why am I getting bot messages on Telegram?](https://www.awaithuman.dev/blog/why-am-i-getting-bot-messages-on-telegram)
-- **AI impersonation and spam.** Admins report AI-generated scam messages, convincing admin impersonators and coordinated bot raids [PARAPHRASE]. — [Chainfuel: stop spam in your Telegram group](https://www.chainfuel.com/blog/how-to-stop-spam-in-your-telegram-group-2026)
-- **Harmful bots.** AI "nudify" and deepfake bots on Telegram are built to survive takedowns, which adds to platform-level distrust of AI bots. — [Centre for Information Resilience](https://www.info-res.org/cir/articles/telegram-deepfake-bots-are-built-to-survive-takedowns/)
-- **Limits and paywalls.** Bots usually cap messages per day, model access or group size. A competitor claims the official ChatGPT presence on Telegram requires Telegram Premium. **This is unverified.** [PARAPHRASE] — [Qualtir: ChatGPT Telegram bot setup](https://qualtir.com/blog/chatgpt-telegram-bot-setup)
-- **Review activity is thin.** A review-platform listing for "ChatGPT on Telegram" invites users to "be the first to post a review" [SNIPPET]. Formal review activity for Telegram AI bots is thin in general. — [SourceForge](https://sourceforge.net/app/chatgpt-on-telegram/web-app/)
+- **[MIRA]** Searches "Mira Telegram bot reddit" and "r/Telegram … Mira" returned no Reddit threads. — Searches on 2026-11-05
+- **[MIRA]** X posts: [@defileo, 2026-07-03](https://x.com/defileo/status/2073053615988830333); [@Eyuel88, 2026-05-08](https://x.com/Eyuel88/status/2052745780876714461); [@gregwrites_yy, 2026-08-11](https://x.com/gregwrites_yy/status/2087312579701997722). An X post claiming 550K MAU appeared in the results. It may be [@ChristianDior31, 2026-08-14](https://x.com/ChristianDior31/status/2088241171067789642); attribution is unclear.
+- **[MIRA]** YouTube: [n361vOBtRrc (#ad)](https://www.youtube.com/watch?v=n361vOBtRrc); [F1GZJKsuIDE (referral link)](https://www.youtube.com/watch?v=F1GZJKsuIDE); [hZTyk1PHtvY (sceptical comment)](https://www.youtube.com/watch?v=hZTyk1PHtvY)
 
 ### Inferences
-- Any Telegram agent starts with a trust deficit created by the scam-bot ecosystem. The @gregwrites_yy post about Mira ("TG spammy shii … canned FAQ") confirms that this baseline applies to Mira's first impression.
-- Design responses could include:
-  - Clear identity and verification cues.
-  - Explicit disclosure of what Mira can see in a group, given privacy mode and admin status.
-  - Consent-forward group onboarding.
-  - Transparent usage limits before users hit the paywall.
+- Feedback lives inside Telegram, in Mira's channel and the groups it is in. Interviews or in-bot surveys are needed to ground the proposal.
 
 ### Gaps
-- No Reddit or app store complaint corpus about Telegram AI bots specifically was found. The proxy themes rest mostly on vendor and security blogs, not on large samples of user voice.
+- Mira's Telegram channel comments (t.me/s/ previews) and @trymira replies were not reachable.
+
+## Key Question 8: [ADJ-TG-BOTS] Proxy, not Mira-specific: problems Telegram AI bot users run into in general
+
+### Takeaway
+Users of Telegram AI bots run into four recurring problems:
+- Paid "AI wrapper" bots and sites that are hard to cancel or refund.
+- Model impersonation: the bot claims to be one model and runs another.
+- A scam and phishing bot ecosystem that lowers trust in any new bot.
+- Confusion over what a bot in a group can see.
+
+### Cited Findings
+- **AI-wrapper billing complaints [PARAPHRASE].** Trustpilot reviews of AI wrapper services describe:
+  - Paid signups by imitating ChatGPT or Claude.
+  - Hard cancellation and refused refunds.
+  - One reviewer charged $200 for a bot advertised as having Claude access.
+  - Bots that deny being ChatGPT or Claude when asked.
+  These are web services, not Telegram bots, and Trustpilot cannot verify the claims. — [Trustpilot askaichat.app](https://ca.trustpilot.com/review/askaichat.app); [Trustpilot chatlyai.app](https://ca.trustpilot.com/review/chatlyai.app); [Trustpilot chatly.solutions](https://ca.trustpilot.com/review/chatly.solutions)
+- **Developer-side payment failures.** "The Stars were charged and on_paid never ran: where Telegram Stars payments get lost in aiogram" [VERBATIM-TITLE]. A developer post shows that charged-but-not-credited Stars payments are a real failure mode. — [DEV Community](https://dev.to/sinnercode228/the-stars-were-charged-and-onpaid-never-ran-where-telegram-stars-payments-get-lost-in-aiogram-5m2)
+- **Missing refund method in a bot library.** "Telegrambot don't have refund function (not exist refundStarPayment method)" [VERBATIM-TITLE]. — [GitHub issue #1211](https://github.com/yagop/node-telegram-bot-api/issues/1211)
+- **Scam bots.** Malicious bots run fake surveys, quizzes and competitions to harvest personal data [PARAPHRASE]. — [NordVPN, 2026](https://nordvpn.com/blog/telegram-scams/)
+- **AI impersonation and raids.** Groups see AI-generated scam messages, admin impersonators and bot raids [PARAPHRASE]. — [Chainfuel, 2026](https://www.chainfuel.com/blog/how-to-stop-spam-in-your-telegram-group-2026)
+- **Unwanted contact.** Bots can message users who have not blocked them [PARAPHRASE]. — [AwaitHuman](https://www.awaithuman.dev/blog/why-am-i-getting-bot-messages-on-telegram)
+- **Deepfake bots.** Telegram "nudify" bots are built to survive takedowns. — [Centre for Information Resilience](https://www.info-res.org/cir/articles/telegram-deepfake-bots-are-built-to-survive-takedowns/)
+- **What a group bot can see.** Privacy Mode is on by default, so a bot sees only commands, mentions and replies. Admin bots see everything. Changing the mode requires removing and re-adding the bot. Bots can't read history from before they joined [PARAPHRASE]. — [Qualtir](https://qualtir.com/blog/telegram-ai-chatbot-for-groups)
+- **Open-source bot docs.** One project's docs say: "You should disable the privacy mode of the bot. Otherwise the bot will not receive the messages from the group chat." [SNIPPET; the exact page was not pinned] — [pokitoki](https://hub.docker.com/r/pengshp/pokitoki); [buhe/chatgpt-telegram-bot](https://github.com/buhe/chatgpt-telegram-bot)
+- **Thin review activity.** The "ChatGPT on Telegram" listing on SourceForge says "be the first to post a review" [SNIPPET]. — [SourceForge](https://sourceforge.net/app/chatgpt-on-telegram/web-app/)
+
+### Inferences
+- Mira starts every new session against this backdrop. Greg's "TG spammy shii" remark shows it directly. Strong identity, verification and transparent billing are table stakes, not polish.
+
+### Gaps
+- No Reddit corpus specifically about paid Telegram AI bots was found.
+
+## Key Question 9: [ADJ-MSG-AGENTS] Proxy, not Mira-specific: problems users of AI agents in messengers run into
+
+### Takeaway
+The adjacent products are Poke (iMessage), Manus Agents (Telegram), OpenClaw (Telegram and others), Meta AI (WhatsApp) and ChatGPT on WhatsApp. Their users report five recurring problems:
+1. Fear of granting inbox or account access, which leads to abandoned onboarding.
+2. Pricing that feels high or unpredictable, including runaway token costs.
+3. Time and date errors, and slow integrations.
+4. Security failures in agents with tools.
+5. Platform risk, where the host messenger bans or limits the agent.
+
+### Cited Findings
+- **Poke (iMessage) [ADJ-MSG-AGENTS].** The search tool did not pin which review page each snippet came from; candidates are [Saner.ai "Honest Poke.com Reviews (2026)"](https://www.saner.ai/blogs/poke-reviews), [The AI Agent Index](https://theaiagentindex.com/agents/poke) and [AIToolBlaze](https://aitoolblaze.com/blog/poke-ai-imessage-agent-review-2026).
+  - On price, one reviewer wrote: "Premium Pricing for a Product Held Together with Duct Tape" [SNIPPET].
+  - On inbox access, one review said: "handing an autonomous agent full inbox access is a category of risk, and Poke doesn't do much to walk you through that decision" [SNIPPET].
+  - Another said: "this isn't like giving ChatGPT a single prompt—this is inviting an AI to continuously monitor your digital life" [SNIPPET].
+  - One writer abandoned onboarding on the first attempt over data-access worries [PARAPHRASE].
+  - Time zone errors, date confusion and slow third-party integrations come up repeatedly in user reviews [PARAPHRASE].
+  - Poke's Privacy Notice (updated 2026-09-11) says user data may train its models unless the user selects Maximum Privacy [PARAPHRASE].
+- **Poke on Product Hunt.** The thread "A Week with Poke Review: A Promising Start for a Proactive AI Assistant" [VERBATIM-TITLE]. — [Product Hunt forum](https://www.producthunt.com/p/poke-by-interaction-co/a-week-with-poke-review-a-promising-start-for-a-proactive-ai-assistant)
+- **Manus Agents for Telegram [ADJ-MSG-AGENTS]. Company response pattern.** The help-center article "Is my data safe when using Manus agents in Telegram" says the agent "cannot: See, read, or interact with any of your other Telegram conversations" [SNIPPET]. It frames account freezes as a Telegram anti-spam issue, not a data leak [PARAPHRASE]. — [Manus Help](https://help.manus.im/en/articles/14033996-is-my-data-safe-when-using-manus-agents-in-telegram)
+  - Earlier coverage: "Manus AI may be the new DeepSeek, but initial users report problems" [VERBATIM-TITLE], March 2025. — [TechRadar](https://techradar.com/pro/manus-ai-may-be-the-new-deepseek-but-initial-users-report-problems)
+- **OpenClaw [ADJ-MSG-AGENTS].**
+  - Notebookcheck headline (URL slug): "Free-to-use AI tool can burn through hundreds of Dollars per day: OpenClaw has absurdly high token use" [VERBATIM-TITLE]. — [Notebookcheck](https://www.notebookcheck.net/Free-to-use-AI-tool-can-burn-through-hundreds-of-Dollars-per-day-OpenClaw-has-absurdly-high-token-use.1219925.0.html)
+  - c't spent over $100 in one day of testing. Reddit users report about $8 every 30 minutes [PARAPHRASE]. — [Notebookcheck](https://www.notebookcheck.net/Free-to-use-AI-tool-can-burn-through-hundreds-of-Dollars-per-day-OpenClaw-has-absurdly-high-token-use.1219925.0.html)
+  - Security problems: exposed instances, malicious skills doing data exfiltration and prompt injection (Cisco), and CertiK advising non-experts to wait for "more mature, hardened, and manageable versions" [SNIPPET]. — [MEXC news](https://www.mexc.com/news/775363)
+- **Meta AI in WhatsApp [ADJ-MSG-AGENTS / control].**
+  - Headlines: "WhatsApp users fume over new Meta AI button that you can't remove – here's what it does" [VERBATIM-TITLE]. — [TechRadar](https://www.techradar.com/computing/websites-apps/whatsapp-users-fume-over-new-meta-ai-button-that-you-cant-remove-heres-what-it-does)
+  - "WhatsApp just made its AI impossible to avoid – but at least you can turn it off" [VERBATIM-TITLE]. — [TechRadar](https://www.techradar.com/computing/artificial-intelligence/whatsapp-just-made-its-ai-impossible-to-avoid-but-at-least-you-can-turn-it-off)
+  - An r/whatsapp thread reports @Meta AI tagging stopped working in groups with no explanation. The likely cause is the Advanced Chat Privacy setting [PARAPHRASE]. — [The News PK](https://www.thenews.com.pk/latest/1416422-is-whatsapp-quietly-removing-meta-ai-from-groups)
+- **ChatGPT on WhatsApp shut down [ADJ-MSG-AGENTS / platform risk].** OpenAI: "1-800-ChatGPT won't work on WhatsApp after Jan 15, 2026." [SNIPPET]. More than 50M users had used it. Users had to link accounts before the cutoff to keep their history, because WhatsApp has no chat export [PARAPHRASE]. — [OpenAI](https://openai.com/index/chatgpt-whatsapp-transition/); [9to5Mac, 2025-10-22](https://9to5mac.com/2025/10/22/meta-kicking-chatgpt-out-of-whatsapp-for-50m-users/)
+
+### Inferences
+- Across messenger agents, the onboarding moment where access is granted is where trust is won or lost. Poke's critics explicitly ask for a guided walkthrough of the decision. That maps directly onto Mira's 0.4% integration activation.
+- Unbounded token costs (OpenClaw) and opaque credits (Mira) are the same problem: users cannot predict cost.
+
+### Gaps
+- Most Poke and OpenClaw sources are blogs or affiliate reviews. Reddit threads were not directly retrieved.
+
+## Key Question 10: [ADJ-TG-PRIVACY] Proxy, not Mira-specific: Telegram users' privacy worries about bots and AI reading their chats
+
+### Takeaway
+Telegram's own AI moves drew pointed privacy pushback: the xAI/Grok deal in May 2025, AI summaries in January 2026, and the AI Editor in March 2026. The pushback included a "huge betrayal" comment, a "compulsory AI" petition with 500+ upvotes, and GitHub requests for an off switch. Telegram, like TOP, answers with Cocoon and TEE claims that have not been audited. Any agent that reads group chats inherits this distrust.
+
+### Cited Findings
+- **The xAI/Grok deal (May 2025).** "Telegram gets some AI integration but you may not love the source" [VERBATIM-TITLE]. — [TechRadar](https://www.techradar.com/computing/artificial-intelligence/telegram-gets-some-ai-integration-but-you-may-not-love-the-source)
+  - Hacker News commenters asked why xAI would pay for access and worried that private chats might feed Grok [PARAPHRASE]. — [HN item 44116862](https://news.ycombinator.com/item?id=44116862)
+  - Privacy Guides members argued that Telegram's privacy marketing overstates its protections [PARAPHRASE]. — [Privacy Guides](https://discuss.privacyguides.net/t/xai-to-pay-telegram-300m-to-integrate-grok-into-the-chat-app/27896)
+  - Durov said xAI would only see content users explicitly send to Grok. Critics noted that Telegram chats are not end-to-end encrypted by default [PARAPHRASE]. — [The Register, 2025-05-28](https://www.theregister.com/software/2025/05/28/elon-musks-xai-pays-telegram-300m-to-integrate-grok/1186099)
+- **AI summaries (January 2026).** An AlternativeTo commenter called Telegram's Cocoon-based AI "a huge betrayal to the majority userbase who preferred Telegram for its privacy features" [SNIPPET]. — [AlternativeTo, 2026-01](https://alternativeto.net/news/2026/1/telegram-introduces-instant-ai-summaries-for-long-posts-and-full-liquid-glass-design-on-ios)
+- **Opt-out requests on GitHub [PARAPHRASE].** — [TelegramMessenger/cocoon issues](https://github.com/TelegramMessenger/cocoon/issues)
+  - Cocoon issue #53 (April 2026) asks for a button to disable AI features in the editor.
+  - Issue #74 (July 2026) flags that "AI Summaries on Instant View have Premium/limits, and mixed-language pages get no summary".
+- **The AI Editor (March 2026).** A Tumblr post titled "Telegram Desktop is rolling out the compulsory AI…" [VERBATIM-TITLE, truncated] reports annoying pop-ups and a feature-request campaign with over 500 upvotes. A toggle was later added to experimental settings [PARAPHRASE]. — [Tumblr (cassolotl)](https://cassolotl.tumblr.com/post/812728783955230720/telegram-desktop-is-rolling-out-the-compulsory-ai)
+- **No official off switch.** A guide says users asked for an official way to disable AI summaries but none had shipped. Workarounds include rolling Desktop back to 6.6.3 [PARAPHRASE]. — [DeleteAccountGuide](https://deleteaccountguide.com/how-to-turn-off-ai-summaries-on-telegram-2026/)
+- **Cocoon still unaudited.** Third-party coverage notes that Cocoon's privacy claims still need an independent audit [PARAPHRASE]. — [HappyCapy Guide](https://happycapyguide.com/blog/telegram-ai-editor-privacy-cocoon-network-2026)
+- **Group bot visibility.** If a summarizer needs admin rights or privacy mode turned off, it sees everything posted in the group. Open-source summarizers advertise hashing user IDs or keeping messages only in memory as privacy features [PARAPHRASE]. — [moalimirinfinity Telegram-Group-Chat-Summarizer-Bot](https://github.com/moalimirinfinity/Telegram-Group-Chat-Summarizer-Bot); [barbashov/telegram_summarize_bot](https://github.com/barbashov/telegram_summarize_bot)
+
+### Inferences
+- Telegram users chose the app partly for privacy, so an AI that reads chats pushes against that identity.
+- The concrete asks seen repeatedly are an off switch, no forced AI UI, and clarity on what is read and stored. Mira's Team Agent design should answer these up front: per-group consent, a visible memory indicator, "forget" controls and an easy remove or mute.
+
+### Gaps
+- No r/Telegram threads were directly retrieved. Reddit sentiment is reported only second-hand.
